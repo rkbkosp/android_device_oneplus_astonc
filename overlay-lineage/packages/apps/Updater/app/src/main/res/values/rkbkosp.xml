@@ -10,4 +10,7 @@
 
     <!-- Downloads page opened from the updater menu. %1$s is the device codename. -->
     <string name="menu_downloads_url" translatable="false">https://rom.rkbkosp.cn/<xliff:g id="device_name">%1$s</xliff:g>/</string>
+
+    <!-- Maintainer shown by the OTA app while the server lists no update. -->
+    <string name="updater_maintainer_local" translatable="false">rkbkosp</string>
 </resources>

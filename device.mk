@@ -101,6 +101,16 @@ PRODUCT_PRODUCT_PROPERTIES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
+# Merge the overlays above into the target APKs at build time instead of turning them into
+# auto-generated runtime RROs (PRODUCT_ENFORCE_RRO_TARGETS is set to "*" by generic_system.mk).
+# The generated <target>__<product>__auto_generated_rro_vendor.apk variants are not applied to
+# the system_ext targets used here (Settings, Updater), which silently left the stock values
+# (e.g. build_maintainer_summary = "Unofficial", updater_server_url = crDroid's GitHub JSON).
+# The overlays inherited from sm8550-common are listed for the same reason.
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    device/oneplus/astonc/overlay-lineage \
+    device/oneplus/sm8550-common/overlay-lineage
+
 PRODUCT_PACKAGES += \
     KeyHandlerResTarget \
     OPlusFrameworksResTarget \
