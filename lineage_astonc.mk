@@ -6,6 +6,7 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
 
 # Inherit from astonc device
 $(call inherit-product, device/oneplus/astonc/device.mk)
@@ -25,6 +26,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="qssi-user 16 BP2A.250605.015 1775718310145 release-keys" \
     BuildFingerprint=OnePlus/PJE110/OP5CF9L1:16/TP1A.220905.001/U.3113a47-dda718-dd6bdf:user/release-keys \
     DeviceName=OP5CF9L1 \
-    DeviceProduct=OP5CF9L1 \
+    DeviceProduct=PJE110 \
     SystemDevice=OP5CF9L1 \
-    SystemName=OP5CF9L1
+    SystemName=PJE110

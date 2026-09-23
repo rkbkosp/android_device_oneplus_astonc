@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: The crDroid Android Project
+# SPDX-License-Identifier: Apache-2.0
+
+# Hangzhou metro assistant feature flag, installed from the product build.prop
+# (device/oneplus/astonc/device.mk: PRODUCT_PRODUCT_PROPERTIES).
+#
+# Readers: system_server (MetroTriggerService gate), Settings (status display) and the
+# metro app (MetroContract.PROP_SUPPORTED). Declared public on purpose: this is a
+# read-only product feature flag, not a security decision input.
+system_public_prop(metro_supported_prop)

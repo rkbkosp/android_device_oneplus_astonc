@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The crDroid Android Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<!--
+     dev.contextsurface.metro is preinstalled as a privileged app in /system_ext/priv-app.
+     With ro.control_privapp_permissions=enforce (vendor/lineage/config/common.mk:102-104)
+     every signature|privileged permission the app requests must be listed here or the
+     device does not boot, so this file is the complete record of the app's permission
+     surface.
+
+     The app declares (packages/apps/HangzhouMetro/src/main/AndroidManifest.xml):
+       android.permission.INTERNET                  normal      (granted at install)
+       android.permission.ACCESS_NETWORK_STATE       normal      (granted at install)
+       android.permission.POST_NOTIFICATIONS         dangerous   (runtime, granted by
+                                                                 default-permissions-dev.contextsurface.metro.xml)
+       android.permission.POST_PROMOTED_NOTIFICATIONS normal|appop (framework
+                                                    frameworks/base/core/res/AndroidManifest.xml:8427-8431,
+                                                    gated on android.app.ui_rich_ongoing)
+
+     Only signature|internal privileged permissions are compared against this allowlist
+     (AppIdPermissionPolicy.checkPrivilegedPermissionAllowlistIfNeeded is reached from the
+     isSignature/isInternal branch, frameworks/base/services/permission/java/com/android/
+     server/permission/access/permission/AppIdPermissionPolicy.kt:1058-1069), and the file
+     is read from the partition the package lives on (same file :1537-1560, isSystemExt ->
+     system_ext allowlist; SystemConfig.java:776-778 reads /system_ext/etc/permissions
+     with ALLOW_ALL). None of the permissions above is signature|privileged, so no
+     privileged access is granted here and the runtime permission deliberately stays out
+     of this file. Keeping the install-time entries makes the app's surface auditable in
+     one place; if the manifest ever requests a signature|privileged permission, add it
+     here in the same commit, otherwise an enforcing build throws
+     "Signature|privileged permissions not in privileged permission allowlist"
+     (AppIdPermissionPolicy.onSystemReady, same file :1821-1828).
+-->
+<permissions>
+    <privapp-permissions package="dev.contextsurface.metro">
+        <!-- normal|appop: promoted ongoing notification (Android Live Updates) -->
+        <permission name="android.permission.POST_PROMOTED_NOTIFICATIONS"/>
+        <!-- normal -->
+        <permission name="android.permission.INTERNET"/>
+        <!-- normal -->
+        <permission name="android.permission.ACCESS_NETWORK_STATE"/>
+    </privapp-permissions>
+</permissions>

@@ -1,0 +1,2 @@
+# Feature flag ro.metro.assistant_supported (device/oneplus/astonc/sepolicy/system_ext/public/property.te)
+ro.metro.assistant_supported  u:object_r:metro_supported_prop:s0 exact bool

@@ -11,6 +11,13 @@ include device/oneplus/sm8550-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/oneplus/astonc
 
+# SELinux
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
+    $(DEVICE_PATH)/sepolicy/system_ext/public
+
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
+    $(DEVICE_PATH)/sepolicy/system_ext/private
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := OP5CF9L1
 

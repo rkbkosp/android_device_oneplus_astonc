@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The crDroid Android Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<!--
+     Install time runtime permission grants for the metro assistant, so the app works the
+     moment the ROM boots. Installed into system_ext because the app is a system_ext app
+     and PermissionManager picks the allowlist/grant file of the partition the package
+     lives on.
+
+     Only POST_NOTIFICATIONS is granted: cell observations come from the system_server
+     bridge (no ACCESS_FINE_LOCATION), no phone state is read (no READ_PHONE_STATE) and
+     the app is kept alive by the framework binding instead of a foreground service
+     (no FOREGROUND_SERVICE). fixed="false" keeps the user free to revoke it.
+-->
+<exceptions>
+    <exception package="dev.contextsurface.metro">
+        <!-- Notifications -->
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+</exceptions>

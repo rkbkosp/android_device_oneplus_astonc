@@ -49,6 +49,35 @@ $(call soong_config_set_bool,qtidisplay,oplus_udfps,true)
 $(call soong_config_set_bool,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_AF,true)
 $(call soong_config_set_bool,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_SE,false)
 
+# Metro assistant
+# Runtime data packs. hangzhou-v2.json is the generated full city pack
+# (tools/metro/convert_hangzhou_pack.py, cellMatchMode LOCAL_CID_COMPAT); hz-lite-v2.json
+# is the accepted 1 line / 5 station prototype baseline (CELL_ID_ONLY_DEBUG) kept in tree
+# for regression switching. METRO_DEFAULT_PACK selects which of the two is installed at
+# the canonical path the app loads (MetroContract.PACK_PATH), so the regression baseline
+# is one build variable away: METRO_DEFAULT_PACK=hz-lite-v2.json.
+METRO_DEFAULT_PACK ?= hangzhou-v2.json
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/metro/$(METRO_DEFAULT_PACK):$(TARGET_COPY_OUT_PRODUCT)/etc/metro/hangzhou-v2.json \
+    $(LOCAL_PATH)/metro/hz-lite-v2.json:$(TARGET_COPY_OUT_PRODUCT)/etc/metro/hz-lite-v2.json
+
+# Permission configuration of the privileged metro app. Both files go to system_ext on
+# purpose: PermissionManager validates the privileged allowlist of the partition the
+# package lives on (AppIdPermissionPolicy.getPrivilegedPermissionAllowlistState ->
+# isSystemExt -> system_ext allowlist) and reads default-permissions from every partition
+# (DefaultPermissionGrantPolicy.java:1520).
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/metro/privapp-permissions-dev.contextsurface.metro.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-dev.contextsurface.metro.xml \
+    $(LOCAL_PATH)/metro/default-permissions-dev.contextsurface.metro.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/default-permissions/default-permissions-dev.contextsurface.metro.xml
+
+PRODUCT_PACKAGES += \
+    HangzhouMetro
+
+# Product feature flag read by the framework trigger service, Settings and the app.
+# SELinux context: device/oneplus/astonc/sepolicy/system_ext/{public/property.te,private/property_contexts}
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.metro.assistant_supported=true
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage

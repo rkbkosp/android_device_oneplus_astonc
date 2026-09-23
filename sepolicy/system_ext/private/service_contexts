@@ -1,0 +1,2 @@
+# android.metro.IMetroTrigger, served by system_server (ServiceManager.addService("metro", ...))
+metro  u:object_r:metro_service:s0

@@ -1,0 +1,16 @@
+# Metro assistant: system_server trigger service <-> metro app (platform_app) and
+# its Settings entry point. Device specific policy, installed through
+# SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS in device/oneplus/astonc/BoardConfig.mk.
+
+# android.metro.IMetroTrigger is registered by system_server. The service type lives in
+# service_manager_type so servicemanager enforces it, system_server_service gives
+# system_server add/find (system/sepolicy/private/system_server.te:1043
+# add_service(system_server, system_server_service)), system_api_service gives platform
+# and privileged app domains find. Settings (system_app) already holds a blanket find on
+# service_manager_type minus a small exclusion list.
+type metro_service, system_api_service, system_server_service, service_manager_type;
+
+# ro.metro.assistant_supported is read by the trigger service, by Settings and by the app.
+get_prop(system_server, metro_supported_prop)
+get_prop(system_app, metro_supported_prop)
+get_prop(platform_app, metro_supported_prop)

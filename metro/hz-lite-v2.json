@@ -1,0 +1,1580 @@
+{
+  "city": "hangzhou",
+  "packVersion": 2,
+  "cellMatchMode": "CELL_ID_ONLY_DEBUG",
+  "lines": [
+    {
+      "id": "line1-device-test",
+      "name": "1号线",
+      "terminals": [
+        "湘湖",
+        "萧山国际机场"
+      ],
+      "stationCodes": [
+        "hz_l1_jiuhe_road",
+        "hz_l1_jiubao",
+        "hz_l1_passenger_center",
+        "hz_l1_xiasha_west",
+        "hz_l1_jinsha_lake"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "code": "hz_l1_jiuhe_road",
+      "displayName": "九和路",
+      "ibusStopName": "九和路",
+      "lineIds": [
+        "line1-device-test"
+      ]
+    },
+    {
+      "code": "hz_l1_jiubao",
+      "displayName": "九堡",
+      "ibusStopName": "九堡",
+      "lineIds": [
+        "line1-device-test"
+      ]
+    },
+    {
+      "code": "hz_l1_passenger_center",
+      "displayName": "客运中心",
+      "ibusStopName": "客运中心",
+      "lineIds": [
+        "line1-device-test"
+      ]
+    },
+    {
+      "code": "hz_l1_xiasha_west",
+      "displayName": "下沙西",
+      "ibusStopName": "下沙西",
+      "lineIds": [
+        "line1-device-test"
+      ]
+    },
+    {
+      "code": "hz_l1_jinsha_lake",
+      "displayName": "金沙湖",
+      "ibusStopName": "金沙湖",
+      "lineIds": [
+        "line1-device-test"
+      ]
+    }
+  ],
+  "cells": [
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 80228097
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101256450
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101256466
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101280513
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 204136971
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22840362114
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22843495558
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22843777026
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22844649857
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868611074
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868611458
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868619266
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868619649
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868619650
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868623361
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868623362
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868623745
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868623746
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868627457
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868627458
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868627841
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868627842
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868635650
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868636034
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22947323905
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22947324163
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47253266543
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47263690866
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47263690875
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47273488695
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47273488698
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277625455
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277625457
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277629552
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277633647
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277637743
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277637744
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277637745
+    },
+    {
+      "stationCode": "hz_l1_jinsha_lake",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47786893425
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22829977861
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22830063873
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868578689
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868582401
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868582402
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868582785
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868582786
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868586501
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868586502
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868586881
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868586883
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868586885
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868586886
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868590594
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868590978
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868607366
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47263010928
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47263183060
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47263183061
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277600879
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277604975
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277604976
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277604977
+    },
+    {
+      "stationCode": "hz_l1_jiubao",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277613169
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 100795926
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101277964
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101283595
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101283616
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 204134155
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 211262294
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22828941569
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22830530817
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22830530819
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868574209
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868574210
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868574593
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868574594
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868578305
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868578306
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868578689
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868578690
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868582401
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868582402
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868586499
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868586501
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868586881
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868586883
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47254302831
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47260487793
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277588592
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277592687
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277596784
+    },
+    {
+      "stationCode": "hz_l1_jiuhe_road",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277596785
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 79136771
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101068290
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101280268
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101280536
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101283852
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101283867
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101284108
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 204135209
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 204135691
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 211256910
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22829305864
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22829306120
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22830657538
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22830657794
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22830838145
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22831042946
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22834900993
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22834901249
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22855057665
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868586502
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868586885
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868586886
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868590594
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868590978
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868594689
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868594691
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868595073
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868595074
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868595075
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868599169
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868599171
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868599172
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868602886
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868603265
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868606979
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868606981
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868606982
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868607363
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868607365
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868607366
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868615553
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47257989232
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47260237935
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47261335663
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47261335665
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47267283056
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277604975
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277604977
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277609071
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277613167
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277613168
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277613169
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277613177
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277617263
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277617264
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277629551
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277662320
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47279435887
+    },
+    {
+      "stationCode": "hz_l1_passenger_center",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47283130481
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101068290
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101256450
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101256466
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101280257
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101280268
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101280513
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101280536
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101283852
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101283867
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 101284108
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 211256910
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22840787202
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22841192707
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22841259010
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868599169
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868599171
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868599172
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868603265
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868611074
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868611457
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868611458
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868615553
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868619266
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868619649
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868619650
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868627458
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 22868627842
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47251239123
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47251239126
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277613167
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277617263
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277617264
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277621359
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277625455
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277625456
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277625457
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277629551
+    },
+    {
+      "stationCode": "hz_l1_xiasha_west",
+      "rat": "CELL_ID_ONLY_DEBUG",
+      "mcc": 0,
+      "mnc": 0,
+      "tacOrLac": 0,
+      "cellId": 47277629552
+    }
+  ],
+  "nameFixes": [],
+  "routeAliases": []
+}
