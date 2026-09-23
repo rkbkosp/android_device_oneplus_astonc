@@ -2,15 +2,19 @@ Hangzhou metro runtime pack conversion report
 (deterministic: no timestamps; regenerate with tools/metro/convert_hangzhou_pack.py)
 
 inputs
-  line   /data/crdroid/device/oneplus/astonc/tools/metro/raw/hz_line_v2.decompressed.json  sha256=6d25e10e81b22bfcf7bfec7ca523fed808b57a523fcd7561fe20e23aa0ee1565
-  bs     /data/crdroid/device/oneplus/astonc/tools/metro/raw/hz_bs_v2.decoded.json  sha256=f679cdff737f1e308acb9260a06f9e910dfacdacb5e6dd14dac30a032ae9c376
-  codes  /data/crdroid/device/oneplus/astonc/tools/metro/station-codes.json  sha256=65c10dd1dfabedb94ce56bacb512067387cf6499e90152b19bda21b31aa1bddf
+  line   tools/metro/raw/hz_line_v2.decompressed.json  sha256=6d25e10e81b22bfcf7bfec7ca523fed808b57a523fcd7561fe20e23aa0ee1565
+  bs     tools/metro/raw/hz_bs_v2.decoded.json  sha256=f679cdff737f1e308acb9260a06f9e910dfacdacb5e6dd14dac30a032ae9c376
+  codes  tools/metro/station-codes.json  sha256=65c10dd1dfabedb94ce56bacb512067387cf6499e90152b19bda21b31aa1bddf
 
 counts
   pack lines       14 (12 distinct metro lines)
   stations         259
   cells            5411
   stations w/cells 255
+  distinct CIDs    3719
+  ambiguous CIDs   1692 (3384 cell rows)
+  stations with unique CID 249
+  stations with ambiguous CIDs only 6
   nameFixes        1
   routeAliases     2
   cellMatchMode    LOCAL_CID_COMPAT
@@ -29,6 +33,14 @@ counts
   hz_s185 火车东站(东广场)站
   hz_s228 六堡站
   hz_s229 五堡站
+
+[B2] stations with cells but no unique CID (cannot match from a single CID without history)
+  hz_s162 富阳客运中心站
+  hz_s167 中村站
+  hz_s210 桥头堡站
+  hz_s213 仓北村站
+  hz_s247 南峰站
+  hz_s257 平澜路站
 
 [C] duplicate CIDs claimed by more than one station (1692 cid values)
   48543938 -> hz_s165, hz_s166

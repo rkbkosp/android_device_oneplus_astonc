@@ -531,15 +531,19 @@ def _display(pack, code):
 def render_report(pack, anomalies, paths, checks):
     out = []
     add = out.append
+    repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
     add("Hangzhou metro runtime pack conversion report")
     add("(deterministic: no timestamps; regenerate with tools/metro/convert_hangzhou_pack.py)")
     add("")
     add("inputs")
     for label, path in paths:
+        display_path = path
+        if path and os.path.commonpath((repo_root, os.path.abspath(path))) == repo_root:
+            display_path = os.path.relpath(path, repo_root)
         if path and os.path.exists(path):
-            add("  %-6s %s  sha256=%s" % (label, path, sha256_file(path)))
+            add("  %-6s %s  sha256=%s" % (label, display_path, sha256_file(path)))
         else:
-            add("  %-6s %s  (missing)" % (label, path))
+            add("  %-6s %s  (missing)" % (label, display_path))
     add("")
     add("counts")
     add("  pack lines       %d (%d distinct metro lines)"
@@ -547,6 +551,21 @@ def render_report(pack, anomalies, paths, checks):
     add("  stations         %d" % len(pack["stations"]))
     add("  cells            %d" % len(pack["cells"]))
     add("  stations w/cells %d" % len({c["stationCode"] for c in pack["cells"]}))
+    ambiguous = anomalies["duplicate_cids"]
+    ambiguous_codes = {code for codes in ambiguous.values() for code in codes}
+    unique_codes = {
+        cell["stationCode"] for cell in pack["cells"]
+        if cell["cellId"] not in ambiguous
+    }
+    ambiguous_only = [
+        station for station in pack["stations"]
+        if station["code"] in ambiguous_codes and station["code"] not in unique_codes
+    ]
+    add("  distinct CIDs    %d" % len({cell["cellId"] for cell in pack["cells"]}))
+    add("  ambiguous CIDs   %d (%d cell rows)" %
+        (len(ambiguous), sum(len(codes) for codes in ambiguous.values())))
+    add("  stations with unique CID %d" % len(unique_codes))
+    add("  stations with ambiguous CIDs only %d" % len(ambiguous_only))
     add("  nameFixes        %d" % len(pack["nameFixes"]))
     add("  routeAliases     %d" % len(pack["routeAliases"]))
     add("  cellMatchMode    %s" % pack["cellMatchMode"])
@@ -578,6 +597,13 @@ def render_report(pack, anomalies, paths, checks):
         add("  none")
     for item in anomalies["stations_without_cells"]:
         add("  %s %s" % (item["code"], item["displayName"]))
+    add("")
+
+    add("[B2] stations with cells but no unique CID (cannot match from a single CID without history)")
+    if not ambiguous_only:
+        add("  none")
+    for station in ambiguous_only:
+        add("  %s %s" % (station["code"], station["displayName"]))
     add("")
 
     add("[C] duplicate CIDs claimed by more than one station (%d cid values)"
@@ -681,6 +707,8 @@ def main(argv):
     parser.add_argument("--report", default=os.path.join(device_metro, "hz-pack-report.txt"))
     parser.add_argument("--no-write", action="store_true",
                         help="build and self check only, do not touch the output files")
+    parser.add_argument("--check", action="store_true",
+                        help="verify checked-in pack and report match the raw inputs, without writing")
     args = parser.parse_args(argv)
 
     for path in (args.line, args.bs):
@@ -700,13 +728,26 @@ def main(argv):
         (("line", args.line), ("bs", args.bs), ("codes", args.codes)),
         checks,
     )
+    pack_text = json.dumps(pack, ensure_ascii=False, indent=2) + "\n"
+
+    if args.check:
+        for path, expected in ((args.out, pack_text), (args.report, report)):
+            try:
+                with open(path, "r", encoding="utf-8") as handle:
+                    actual = handle.read()
+            except OSError as exc:
+                raise SystemExit("pack check failed: cannot read %s: %s" % (path, exc))
+            if actual != expected:
+                raise SystemExit("pack check failed: %s differs from generated content" % path)
+        print("pack check passed: generated pack and report match checked-in files")
+        return 0
+
     sys.stdout.write(report)
 
     if not args.no_write:
         os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
         with open(args.out, "w", encoding="utf-8") as handle:
-            json.dump(pack, handle, ensure_ascii=False, indent=2)
-            handle.write("\n")
+            handle.write(pack_text)
         with open(args.report, "w", encoding="utf-8") as handle:
             handle.write(report)
     return 0
