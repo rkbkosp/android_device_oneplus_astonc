@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2026 rkbkosp
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- About phone: maintainer is fixed by the device tree, Settings never looks it up online. -->
+    <string name="build_maintainer_summary">rkbkosp</string>
+
+    <!-- About phone: empty donate URL disables the link. -->
+    <string name="build_maintainer_donate_url"></string>
+</resources>
