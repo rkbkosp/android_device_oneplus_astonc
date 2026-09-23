@@ -12,6 +12,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     $(LOCAL_PATH)/configs/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
 
+# LHDC encoder blobs from PJE110 16.0.5.1002. Bluetooth APEX also includes
+# these libraries; see lhdc/README.md for the port status.
+PRODUCT_PACKAGES += \
+    liblhdc \
+    liblhdcBT_enc \
+    liblhdcv5 \
+    liblhdcv5BT_enc
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2780
 TARGET_SCREEN_WIDTH := 1264

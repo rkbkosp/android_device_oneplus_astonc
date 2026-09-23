@@ -1,0 +1,46 @@
+// PJE110 / ColorOS 16.0.5.1002 encoder binaries. The headers are from
+// Savitech's AOSP 16 integration and are used only to compile the A2DP stack.
+
+cc_prebuilt_library_shared {
+    name: "liblhdcv5",
+    srcs: ["libs/arm64-v8a/liblhdcv5.so"],
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    shared_libs: [
+        "liblog",
+        "libstdc++",
+        "libc",
+        "libm",
+        "libdl",
+    ],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.bt",
+    ],
+    min_sdk_version: "36",
+}
+
+cc_prebuilt_library_shared {
+    name: "liblhdcv5BT_enc",
+    srcs: ["libs/arm64-v8a/liblhdcv5BT_enc.so"],
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    shared_libs: [
+        "libcutils",
+        "liblog",
+        "liblhdcv5",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl",
+    ],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.bt",
+    ],
+    min_sdk_version: "36",
+}
