@@ -1,0 +1,62 @@
+cc_prebuilt_library_shared {
+    name: "libcpion",
+    owner: "oneplus",
+    srcs: ["blobs/libcpion.so"],
+    shared_libs: [
+        "liblog",
+        "libdmabufheap",
+        "libvmmem",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl",
+    ],
+    compile_multilib: "64",
+    strip: { none: true },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libtrustedapploader",
+    owner: "oneplus",
+    srcs: ["blobs/libtrustedapploader.so"],
+    shared_libs: [
+        "liblog",
+        "libminkdescriptor",
+        "libminksocket_vendor",
+        "libqcbor",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl",
+    ],
+    compile_multilib: "64",
+    strip: { none: true },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "liboemcrypto",
+    owner: "oneplus",
+    srcs: ["blobs/liboemcrypto.so"],
+    shared_libs: [
+        "libutils",
+        "liblog",
+        "libQSEEComAPI",
+        "libhidlbase",
+        "libcpion",
+        "libminkdescriptor",
+        "libcutils",
+        "libtrustedapploader",
+        "libxml2",
+        "libdisplayconfig.qti",
+        "libpower",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl",
+    ],
+    compile_multilib: "64",
+    strip: { none: true },
+    device_specific: true,
+}

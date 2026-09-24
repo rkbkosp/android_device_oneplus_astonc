@@ -116,6 +116,12 @@ PRODUCT_PACKAGES += \
     android.hardware.power.stats-impl.oplus \
     astonc_power_stats_config.xml
 
+# Stock PJE110 OEMCrypto loader input and its missing vendor dependencies.
+PRODUCT_PACKAGES += \
+    libcpion \
+    libtrustedapploader \
+    liboemcrypto
+
 # The port's handlefactory HAL is device specific, so checkvintf needs its instance named in a
 # framework compatibility matrix (powerstats/framework_matrix.xml explains why).
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
