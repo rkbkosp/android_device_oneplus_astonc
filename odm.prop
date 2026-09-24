@@ -1,7 +1,9 @@
 # Device
-ro.product.odm.device=OP5CF9L1
-ro.product.odm.model=PJE110
-ro.product.odm.name=OP5CF9L1
+# The odm identity (brand/device/model/name and the odm fingerprint) is owned by
+# device/oneplus/astonc/identity.mk, which sets the per-partition build props to the stock
+# PJE110 16.0.5.1002 values. Repeating them here aborted the build: gen_build_prop rejects
+# two assignments of one property with different values, and ro.product.odm.name was
+# OP5CF9L1 here against PJE110 there.
 ro.vendor.oplus.regionmark=CN
 
 # Display

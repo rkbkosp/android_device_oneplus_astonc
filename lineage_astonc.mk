@@ -22,10 +22,5 @@ PRODUCT_MODEL := PJE110
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="qssi-user 16 BP2A.250605.015 1775718310145 release-keys" \
-    BuildFingerprint=OnePlus/PJE110/OP5CF9L1:16/TP1A.220905.001/U.3113a47-dda718-dd6bdf:user/release-keys \
-    DeviceName=OP5CF9L1 \
-    DeviceProduct=PJE110 \
-    SystemDevice=OP5CF9L1 \
-    SystemName=PJE110
+# Stock Ace 3 (PJE110) 16.0.5.1002 build identity; see identity.mk for the value sources.
+$(call inherit-product, device/oneplus/astonc/identity.mk)
