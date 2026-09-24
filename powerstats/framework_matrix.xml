@@ -1,0 +1,21 @@
+<compatibility-matrix version="4.0" type="framework">
+    <!-- vendor.oplus.hardware.handlefactory is a device-specific HAL of the stock PowerStats
+         implementation, not an AOSP interface: no framework compatibility matrix names it, and
+         checkvintf refuses a device manifest instance the framework matrix does not carry:
+
+             ERROR: files are incompatible: The following instances are in the device manifest
+             but not specified in framework compatibility matrix:
+                 vendor.oplus.hardware.handlefactory.IHandleFactory/default (@1)
+
+         It is optional because the framework does not call it: the PowerStats service registers
+         its own IHandleFactory instance from the same process. Naming it here is what lets the
+         odm manifest fragment the port installs stay compatible. See powerstats/README.md. -->
+    <hal format="aidl" optional="true">
+        <name>vendor.oplus.hardware.handlefactory</name>
+        <version>1</version>
+        <interface>
+            <name>IHandleFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</compatibility-matrix>

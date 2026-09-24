@@ -1,0 +1,7 @@
+service vendor.power.stats.astonc /odm/bin/hw/android.hardware.power.stats-service.astonc
+    class hal
+    user system
+    group system root
+
+on property:vendor.astonc.powerstats.ready=1
+    start vendor.power.stats

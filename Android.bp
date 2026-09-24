@@ -1,2 +1,6 @@
 soong_namespace {
+    imports: [
+        "vendor/oneplus/sm8550-common",
+        "hardware/qcom-caf/sm8550",
+    ],
 }

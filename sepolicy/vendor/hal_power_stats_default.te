@@ -1,0 +1,7 @@
+add_service(hal_power_stats_default, hal_oplus_handle_factory_service)
+
+# The stock service reads Qualcomm sleep residency and battery state nodes.
+# Further access can be narrowed after checking labels and AVCs on the device.
+r_dir_file(hal_power_stats_default, sysfs)
+r_dir_file(hal_power_stats_default, vendor_sysfs_usb_supply)
+set_prop(hal_power_stats_default, vendor_astonc_powerstats_prop)

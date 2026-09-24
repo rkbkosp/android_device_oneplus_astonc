@@ -1,0 +1,63 @@
+cc_prebuilt_library_shared {
+    name: "vendor.oplus.hardware.handlefactory-V1-ndk",
+    owner: "oneplus",
+    srcs: ["blobs/vendor.oplus.hardware.handlefactory-V1-ndk.so"],
+    shared_libs: [
+        "libbinder_ndk",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl",
+    ],
+    compile_multilib: "64",
+    strip: { none: true },
+    device_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.power.stats-impl.oplus",
+    owner: "oneplus",
+    srcs: ["blobs/android.hardware.power.stats-impl.oplus.handlefactory"],
+    shared_libs: [
+        "android.hardware.power.stats-V1-ndk",
+        "vendor.oplus.hardware.handlefactory-V1-ndk",
+        "libbase",
+        "libbinder_ndk",
+        "libcutils",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl",
+    ],
+    compile_multilib: "64",
+    strip: { none: true },
+    relative_install_path: "hw",
+    init_rc: ["android.hardware.power.stats-service.oplus.rc"],
+    vintf_fragments: [
+        "android.hardware.power.stats-service.oplus.xml",
+    ],
+    device_specific: true,
+}
+
+cc_binary {
+    name: "android.hardware.power.stats-service.astonc",
+    owner: "oneplus",
+    srcs: ["battery/main.cpp"],
+    shared_libs: [
+        "android.hardware.power.stats-V1-ndk",
+        "libbase",
+        "libbinder_ndk",
+    ],
+    relative_install_path: "hw",
+    init_rc: ["battery/android.hardware.power.stats-service.astonc.rc"],
+    vintf_fragments: ["android.hardware.power.stats.IPowerStats.xml"],
+    device_specific: true,
+}
+
+prebuilt_etc {
+    name: "astonc_power_stats_config.xml",
+    owner: "oneplus",
+    src: "power_stats_config.xml",
+    filename: "power_stats_config.xml",
+    device_specific: true,
+}

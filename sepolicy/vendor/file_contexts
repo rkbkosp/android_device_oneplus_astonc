@@ -1,0 +1,2 @@
+/odm/bin/hw/android\.hardware\.power\.stats-impl\.oplus u:object_r:hal_power_stats_default_exec:s0
+/odm/bin/hw/android\.hardware\.power\.stats-service\.astonc u:object_r:hal_power_stats_default_exec:s0

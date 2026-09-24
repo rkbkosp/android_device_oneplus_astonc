@@ -111,6 +111,16 @@ PRODUCT_PACKAGES += \
 # Power
 $(call soong_config_set,qtipower,mode_ext_lib,power-ext-oplus)
 
+PRODUCT_PACKAGES += \
+    android.hardware.power.stats-service.astonc \
+    android.hardware.power.stats-impl.oplus \
+    astonc_power_stats_config.xml
+
+# The port's handlefactory HAL is device specific, so checkvintf needs its instance named in a
+# framework compatibility matrix (powerstats/framework_matrix.xml explains why).
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    device/oneplus/astonc/powerstats/framework_matrix.xml
+
 # Sensors
 PRODUCT_PACKAGES += \
     sensors.oplus
