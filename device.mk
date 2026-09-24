@@ -20,17 +20,6 @@ PRODUCT_PACKAGES += \
     liblhdcv5 \
     liblhdcv5BT_enc
 
-# Stock Qualcomm Bluetooth audio HAL from the same firmware (PJE110 16.0.5.1002).
-# It is the LHDC-aware counterpart of the AOSP AIDL impl: it registers the AIDL
-# session for A2DP_SOFTWARE_ENCODING_DATAPATH and routes LHDC
-# (is_lhdc_connected / "open aidl_1_0 success for a2dp(LHDC)"). The AOSP impl
-# alone fails that handshake on this device, so the software datapath stays dead
-# and every codec is silent once A2DP offload is disabled. Installed to
-# vendor/lib64/hw/ by lhdc/Android.bp (relative_install_path: "hw");
-# PRODUCT_COPY_FILES cannot carry an ELF prebuilt. See lhdc/README.md.
-PRODUCT_PACKAGES += \
-    audio.bluetooth_qti.default
-
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2780
 TARGET_SCREEN_WIDTH := 1264

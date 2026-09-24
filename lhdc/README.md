@@ -21,38 +21,57 @@ Bluetooth framework codec indices in this source stack are 7 (V3) and 8 (V5),
 while the stock Bluetooth.apk uses 18 and 19; the stock APK/JNI pair is not
 part of this port.
 
-The generic `audio.bluetooth.default` path should provide PCM to the source
-stack's software encoder. As of 2026-09-23 the stock `audio.bluetooth_qti.default.so`
-and its LHDC audio policy route **are** installed, mirroring the stock ROM:
+The `audio.bluetooth.default` path supplies PCM to the source stack's LHDC
+encoder. The `bluetooth` policy module also carries the hearing aid port.
+The stock `audio.bluetooth_qti.default.so` is declared as a prebuilt but is
+not installed by astonc:
 
 * HAL blob `vendor/oneplus/sm8550-common/proprietary/vendor/lib64/hw/audio.bluetooth_qti.default.so`,
   declared as `cc_prebuilt_library_shared` in `vendor/oneplus/sm8550-common/Android.bp`
   (`relative_install_path: "hw"`; ELF prebuilts cannot go through `PRODUCT_COPY_FILES`).
-* Audio policy: the `bluetooth_qti` module in
-  `device/oneplus/sm8550-common/configs/audio/audio_policy_configuration.xml` now carries
-  the hearing aid path only. LHDC must **not** be declared as an offload format there:
-  with `AUDIO_FORMAT_LHDC`/`AUDIO_FORMAT_LHDC_LL` on that module's BT A2DP device ports,
-  AudioPolicyManager routed LHDC to the ADSP offload datapath (`session_type=2`), which
-  has no LHDC encoder, and the HAL then failed to open the stream —
-  `open_a2dp_source: Failed to open source stream for a2dp: status -1`, retried forever.
-* The stack keeps LHDC off that datapath explicitly: `is_lhdc_source_codec()` in
+* Audio policy: the `bluetooth` module carries PCM A2DP for AAC, SBC, and LHDC,
+  plus hearing aid. `primary` retains encoded A2DP profiles in the shared policy,
+  but astonc disables hardware A2DP offload.
+* `AudioSystem.bluetoothA2dpCodecToAudioFormat()` maps LHDC V3 and V5 to
+  `AUDIO_FORMAT_LHDC`. This lets AudioPolicyManager select the `bluetooth`
+  module when LHDC is negotiated. Without the mapping, it reports
+  `AUDIO_FORMAT_DEFAULT` and can keep the primary A2DP route.
+* The stack keeps AAC, SBC, and LHDC off that datapath explicitly: `uses_host_encoding()` in
   `packages/modules/Bluetooth/system/audio_hal_interface/aidl/a2dp/a2dp_encoding_aidl.cc`
-  skips both offload branches of `setup_codec()` (the AIDL v4 provider branch, which the
-  stock HAL claims for LHDC, and the legacy hardware path), so LHDC reaches
+  skips both offload branches of `setup_codec()`, so these codecs reach
   `getHalPcmConfiguration()` and `A2DP_SOFTWARE_ENCODING_DATAPATH`.
 
-Reason: with the AOSP AIDL impl alone the software datapath is dead on this device —
-`startSession()` succeeds, yet the vendor PAL in the same process reports
-"bluetooth provider session is not avail", so every codec is silent once A2DP
-offload is disabled. The stock HAL is self-consistent (it provides the AIDL
-provider and consumes the session). Playback is still unverified on a running device; the 2026-09-23 capture confirms the
-negotiation side (LHDC V5, 48 kHz / 24 bit, SEP configured and requested) and pins the
-failure to the offload routing above. The LHDC path is the host-encoded one (software
-datapath), never offload — the ADSP firmware carries no LHDC encoder.
-In particular, the public V5 code targets a newer encoder release than the
+The Bluetooth AIDL provider is registered by `android.hardware.audio.service`
+from `android.hardware.bluetooth.audio-impl`, separately from the audio policy
+module. `lshal` lists HIDL services and cannot verify that registration. The
+2026-09-24 device capture showed that the software session started, but
+`audio.bluetooth.default` reported that session type not ready. AudioPolicyManager
+then failed to open A2DP output with `-19` and routed LHDC and AAC to the
+speaker. Removing the `bluetooth_qti` policy module alone did not fix this:
+`AudioExtn::a2dp_source_feature_init()` in the primary HAL also loads
+`btaudio_offload_if.so` when `vendor.audio.feature.a2dp_offload.enable=true`.
+That library brings the QTI AIDL session library into the same audio service
+process as the AOSP session library. Both export the same
+`BluetoothAudioSessionInstance` symbols with incompatible session interfaces.
+
+A live test set `vendor.audio.feature.a2dp_offload.enable=false` and restarted
+`vendor.audio-hal`. The QTI session libraries disappeared from the audio service
+process, A2DP output opened successfully, and the headset became the selected
+media output. The user confirmed audible AAC and LHDC playback and smooth video.
+`astonc/vendor.prop` now disables the Qualcomm offload client and A2DP hardware
+offload by default. `ro.bluetooth.a2dp_offload.supported=false` keeps software
+encoding selected even if an old persisted offload setting is still `false`.
+The common properties use optional defaults so other sm8550 devices retain their
+previous values. The QTI/AOSP symbol collision is the likely mechanism; the
+live test establishes that disabling the QTI client fixes routing.
+
+The intended LHDC path is host encoding; the ADSP offload capability string
+does not list LHDC. The public V5 code targets a newer encoder release than the
 stock PJE110 V5 binary despite the adjusted ABI and capability subset.
 
-Validation after building and flashing requires a LHDC-capable headset:
-inspect selectable/current codecs, A2DP negotiation, encoder loading, audio
-route, playback, reconnect and fallback. Do not infer V5 operation from the
-resource priorities alone.
+Validation after flashing a new build still requires AAC and LHDC-capable
+headsets: check that `bluetooth_qti` is absent from audio policy, QTI session
+libraries are absent from the audio service, A2DP appears in available outputs,
+and the software session carries both codecs. Check audible playback, video
+smoothness, reconnect, and fallback. Do not infer V5 operation from resource
+priorities alone.

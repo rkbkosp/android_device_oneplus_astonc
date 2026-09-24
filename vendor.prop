@@ -1,5 +1,11 @@
 # Bluetooth
 bluetooth.device.default_name=OnePlus Ace 3
+# The Qualcomm A2DP offload client loads a QTI session library beside the AOSP
+# Bluetooth audio library. Disabling that client restored A2DP routing in a
+# live test, so use software encoding and keep the client unloaded.
+vendor.audio.feature.a2dp_offload.enable=false
+ro.bluetooth.a2dp_offload.supported=false
+persist.bluetooth.a2dp_offload.disabled=true
 
 # Device name
 ro.product.marketname=OnePlus Ace 3
